@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { RouterLink, RouterView } from "vue-router";
 import groups from "./assets/data.json";
 </script>

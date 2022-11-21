@@ -29,7 +29,7 @@
     />
   </div>
 </template>
-<script lang="ts">
+<script>
 import MatchInput from "@/components/MatchInput.vue";
 import groups from "../assets/data.json";
 import { roundOf16, roundOf8, semifinals, finals } from "@/store/simpleStore";

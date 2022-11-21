@@ -16,7 +16,7 @@
     <NavigationActions :back="back" :forward="forward"></NavigationActions>
   </div>
 </template>
-<script lang="ts">
+<script>
 import groups from "../assets/data.json";
 import MatchInput from "../components/MatchInput.vue";
 import MatchResults from "../components/MatchResults.vue";
@@ -82,7 +82,7 @@ export default {
     },
   },
   methods: {
-    getTeamData(countryName: String) {
+    getTeamData(countryName) {
       try {
         const [team, flag] = this.teams[countryName];
         return {

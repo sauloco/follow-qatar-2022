@@ -23,7 +23,7 @@
     "
   ></NavigationActions>
 </template>
-<script lang="ts">
+<script>
 import MatchInput from "../components/MatchInput.vue";
 import NavigationActions from "../components/NavigationActions.vue";
 import { roundOf16, roundOf8 } from "../store/simpleStore";

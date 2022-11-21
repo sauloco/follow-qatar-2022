@@ -35,7 +35,7 @@
     </template>
   </div>
 </template>
-<script lang="ts">
+<script>
 import { roundOf16 } from "@/store/simpleStore";
 
 export default {

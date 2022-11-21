@@ -11,7 +11,7 @@
     </RouterLink>
   </div>
 </template>
-<script lang="ts">
+<script>
 export default {
   name: "NavigationActions",
   props: {

@@ -23,7 +23,7 @@
     "
   ></NavigationActions>
 </template>
-<script lang="ts">
+<script>
 import MatchInput from "../components/MatchInput.vue";
 import { roundOf8, semifinals } from "../store/simpleStore";
 import NavigationActions from "@/components/NavigationActions.vue";
