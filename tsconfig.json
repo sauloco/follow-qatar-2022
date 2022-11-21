@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*.ts"],
+  "include": ["env.d.ts", "src/**/*.ts", "src/utils/localStorage.js", "src/utils/localStorage.js", "src/store/simpleStore.js", "src/store/simpleStore.js", "src/main.js", "src/main.js"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
