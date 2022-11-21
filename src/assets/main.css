@@ -1,9 +1,7 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  height: 100vh;
-  margin: 0 auto;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -14,13 +12,9 @@
   }
 }
 
-@media (min-width: 1024px) {
+
   body {
     display: flex;
     place-items: center;
   }
 
-  #app {
-    height: 100vh;
-  }
-}
