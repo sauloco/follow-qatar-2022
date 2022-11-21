@@ -1,0 +1,138 @@
+[
+  {
+    "name": "A",
+    "matches": [
+      ["qatar", "ecuador", "20/11 13:00"],
+      ["senegal", "netherlands", "21/11 13:00"],
+      ["qatar", "senegal", "25/11 10:00"],
+      ["netherlands", "ecuador", "25/11 13:00"],
+      ["netherlands", "qatar", "29/11 12:00"],
+      ["ecuador", "senegal", "29/11 12:00"]
+    ],
+    "teams": {
+      "qatar": ["Qatar", "🇶🇦"],
+      "ecuador": ["Ecuador", "🇪🇨"],
+      "senegal": ["Senegal", "🇸🇳"],
+      "netherlands": ["Paises Bajos", "🇳🇱"]
+    }
+  },
+  {
+    "name": "B",
+    "matches": [
+      ["england", "iran", "21/11 10:00"],
+      ["usa", "wales", "21/11 16:00"],
+      ["wales", "iran", "25/11 07:00"],
+      ["england", "usa", "25/11 16:00"],
+      ["wales", "england", "29/11 16:00"],
+      ["iran", "usa", "29/11 16:00"]
+    ],
+    "teams": {
+      "england": ["Inglaterra", "🏴󠁧󠁢󠁥󠁮󠁧󠁿"],
+      "iran": ["Irán", "🇮🇷"],
+      "usa": ["USA", "🇺🇸"],
+      "wales": ["Gales", "🏴󠁧󠁢󠁷󠁬󠁳󠁿"]
+    }
+  },
+  {
+    "name": "C",
+    "matches": [
+      ["argentina", "arabia", "22/11 07:00"],
+      ["mexico", "poland", "22/11 13:00"],
+      ["poland", "arabia", "26/11 10:00"],
+      ["argentina", "mexico", "26/11 16:00"],
+      ["poland", "argentina", "30/11 16:00"],
+      ["arabia", "mexico", "30/11 16:00"]
+    ],
+    "teams": {
+      "argentina": ["Argentina", "🇦🇷"],
+      "arabia": ["Arabia Saudita", "🇸🇦"],
+      "mexico": ["México", "🇲🇽"],
+      "poland": ["Polonia", "🇵🇱"]
+    }
+  },
+  {
+    "name": "D",
+    "matches": [
+      ["denmark", "tunisia", "22/11 10:00"],
+      ["france", "australia", "22/11 16:00"],
+      ["tunisia", "australia", "26/11 07:00"],
+      ["france", "denmark", "26/11 13:00"],
+      ["australia", "denmark", "30/11 12:00"],
+      ["tunisia", "france", "30/11 12:00"]
+    ],
+    "teams": {
+      "france": ["Francia", "🇫🇷"],
+      "australia": ["Australia", "🇦🇺"],
+      "denmark": ["Dinamarca", "🇩🇰"],
+      "tunisia": ["Túnez", "🇹🇳"]
+    }
+  },
+  {
+    "name": "E",
+    "matches": [
+      ["germany", "japan", "23/11 10:00"],
+      ["spain", "costarica", "23/11 13:00"],
+      ["japan", "costarica", "27/11 07:00"],
+      ["spain", "germany", "27/11 16:00"],
+      ["japan", "spain", "1/12 16:00"],
+      ["costarica", "germany", "1/12 16:00"]
+    ],
+    "teams": {
+      "spain": ["España", "🇪🇸"],
+      "costarica": ["Costa Rica", "🇨🇷"],
+      "germany": ["Alemania", "🇩🇪"],
+      "japan": ["Japón", "🇯🇵"]
+    }
+  },
+  {
+    "name": "F",
+    "matches": [
+      ["morocco", "croatia", "23/11 07:00"],
+      ["belgium", "canada", "23/11 16:00"],
+      ["belgium", "morocco", "27/11 10:00"],
+      ["croatia", "canada", "27/11 13:00"],
+      ["croatia", "belgium", "1/12 12:00"],
+      ["canada", "morocco", "1/12 12:00"]
+    ],
+    "teams": {
+      "belgium": ["Bélgica", "🇧🇪"],
+      "canada": ["Canadá", "🇨🇦"],
+      "morocco": ["Marruecos", "🇲🇦"],
+      "croatia": ["Croacia", "🇭🇷"]
+    }
+  },
+  {
+    "name": "G",
+    "matches": [
+      ["switzerland", "cameroon", "24/11 07:00"],
+      ["brazil", "serbia", "24/11 16:00"],
+      ["cameroon", "serbia", "28/11 07:00"],
+      ["brazil", "switzerland", "28/11 13:00"],
+      ["serbia", "switzerland", "2/12 16:00"],
+      ["cameroon", "brazil", "2/12 16:00"]
+    ],
+    "teams": {
+      "brazil": ["Brasil", "🇧🇷"],
+      "serbia": ["Serbia", "🇷🇸"],
+      "switzerland": ["Suiza", "🇨🇭"],
+      "cameroon": ["Camerún", "🇨🇲"]
+    }
+  },
+  {
+    "name": "H",
+    "matches": [
+      ["uruguay", "korea", "24/11 10:00"],
+      ["portugal", "ghana", "24/11 13:00"],
+      ["korea", "ghana", "28/11 10:00"],
+      ["portugal", "uruguay", "28/11 16:00"],
+      ["ghana", "uruguay", "2/12 12:00"],
+      ["korea", "portugal", "2/12 12:00"]
+    ],
+    "teams": {
+      "portugal": ["Portugal", "🇵🇹"],
+      "ghana": ["Ghana", "🇬🇭"],
+      "uruguay": ["Uruguay", "🇺🇾"],
+      "korea": ["Corea Del Sur", "🇰🇷"]
+    }
+  }
+]
