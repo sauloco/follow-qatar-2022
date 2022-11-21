@@ -37,7 +37,7 @@ import { roundOf16, roundOf8, semifinals, finals } from "@/store/simpleStore";
 export default {
   name: "Today",
   components: {
-    MatchInput
+    MatchInput,
   },
   data() {
     return {
@@ -56,6 +56,8 @@ export default {
       if (toMorrow === 30) {
         toMorrow = 1;
         toMorrowMonth++;
+      } else {
+        toMorrow++;
       }
       return this.getMatchesPerDate(toMorrow, toMorrowMonth);
     },
