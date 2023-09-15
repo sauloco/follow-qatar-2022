@@ -1,6 +1,6 @@
 <template>
-  <h1>Partidos de Hoy</h1>
-  <div class="match-wrapper">
+  <h1 v-if="todayMatches.length">Partidos de Hoy</h1>
+  <div v-if="todayMatches.length" class="match-wrapper">
     <MatchInput
       v-for="([home, away, date], index) in todayMatches"
       readonly
@@ -13,11 +13,23 @@
       :date="date"
     />
   </div>
+  <h1 v-else>Hoy no hay partidos</h1>
 
-  <h2>Partidos de Mañana</h2>
-  <div class="match-wrapper">
+  <h2 v-if="tomorrowMatches.length">Partidos de Mañana</h2>
+  <div v-if="tomorrowMatches.length" class="match-wrapper">
     <MatchInput
-      v-for="([home, away, date], index) in tomorrowMatches"
+      v-for="(
+        [
+          home,
+          away,
+          date,
+          actualHomeScore,
+          actualAwayScore,
+          actualHomePen,
+          actualAwayPen,
+        ],
+        index
+      ) in tomorrowMatches"
       readonly
       :key="`${home}-${away}`"
       :matchId="`tomorrow-${index}`"
@@ -25,9 +37,14 @@
       :homeFlag="teams[home][1]"
       :awayName="teams[away][0]"
       :awayFlag="teams[away][1]"
+      :actualHomeScore="actualHomeScore"
+      :actualAwayScore="actualAwayScore"
+      :actualHomePen="actualHomePen"
+      :actualAwayPen="actualAwayPen"
       :date="date"
     />
   </div>
+  <h2 v-else>Mañana no habrá partidos</h2>
 </template>
 <script>
 import MatchInput from "@/components/MatchInput.vue";
@@ -76,6 +93,11 @@ export default {
         matches.push(
           ...group.matches
             .filter((match) => match[2].includes(`${day}/${month + 1}`))
+            .sort((a, b) => {
+              const result = a[2].localeCompare(b[2]);
+              console.log(a, b, result);
+              return result;
+            })
             .filter(Boolean)
         );
       }

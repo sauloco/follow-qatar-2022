@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
+import { getFromSource } from "../store/simpleStore";
 import { getFromLS, setToLS } from "../utils/localStorage";
 
 const props = defineProps({
@@ -35,12 +36,44 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  actualHomeScore: {
+    type: Number,
+  },
+  actualAwayScore: {
+    type: Number,
+  },
+  actualHomePen: {
+    type: Number,
+  },
+  actualAwayPen: {
+    type: Number,
+  },
 });
 const min = 0;
 const max = 12;
 const maxPen = 99;
+let forceReadOnly = false;
 
 const oldData = getFromLS(props.matchId);
+
+const [
+  a,
+  b,
+  c,
+  actualHomeScore,
+  actualAwayScore,
+  actualHomePen,
+  actualAwayPen,
+] = getFromSource(props.matchId);
+
+if (
+  props.actualHomeScore === 0 ||
+  props.actualHomeScore ||
+  actualHomeScore === 0 ||
+  actualHomeScore
+) {
+  forceReadOnly = true;
+}
 
 let homeRef = 0;
 let awayRef = 0;
@@ -136,9 +169,13 @@ if (oldData) {
       <span class="flag">{{ props.homeFlag }}</span>
       <span class="home name">{{ props.homeName }}</span>
       <span class="home score">
+        <span v-if="forceReadOnly" class="final-result">
+          <strong>{{ actualHomeScore }}</strong>
+        </span>
         <strong v-if="readonly">{{ homeScore }}</strong>
         <input
           v-else
+          :disabled="forceReadOnly"
           type="number"
           :min="0"
           :max="15"
@@ -150,9 +187,13 @@ if (oldData) {
       <span class="divider"> – </span>
 
       <span class="score">
+        <span v-if="forceReadOnly" class="final-result">
+          <strong>{{ actualAwayScore }}</strong>
+        </span>
         <strong v-if="readonly">{{ awayScore }}</strong>
         <input
           v-else
+          :disabled="forceReadOnly"
           type="number"
           :min="min"
           :max="max"
@@ -168,11 +209,15 @@ if (oldData) {
         <span v-for="n in homeScorePen" :key="n">⚽️</span>
       </span>
       <span class="home score">
+        <span v-if="forceReadOnly" class="final-result">
+          <strong>{{ actualHomePen }}</strong>
+        </span>
         <span v-if="readonly">
           <strong>{{ homeScorePen }}</strong>
         </span>
         <input
           v-else
+          :disabled="forceReadOnly"
           type="number"
           :min="min"
           :max="maxPen"
@@ -182,9 +227,13 @@ if (oldData) {
       </span>
       <span class="divider"> – </span>
       <span class="score">
+        <span v-if="forceReadOnly" class="final-result">
+          <strong>{{ actualAwayPen }}</strong>
+        </span>
         <strong v-if="readonly">{{ awayScorePen }}</strong>
         <input
           v-else
+          :disabled="forceReadOnly"
           type="number"
           :min="min"
           :max="maxPen"
@@ -220,11 +269,16 @@ if (oldData) {
 .home.name {
   text-align: right;
 }
+.name {
+  
+  align-self: center;
+}
 .flag {
   font-size: 1.5rem;
   margin: 0 0.5rem;
   line-height: 2rem;
   width: 10%;
+  align-self: center;
 }
 .flag.away {
   text-align: right;

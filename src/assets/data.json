@@ -2,8 +2,8 @@
   {
     "name": "A",
     "matches": [
-      ["qatar", "ecuador", "20/11 13:00"],
-      ["senegal", "netherlands", "21/11 13:00"],
+      ["qatar", "ecuador", "20/11 13:00", 0, 2],
+      ["senegal", "netherlands", "21/11 13:00", 0, 2],
       ["qatar", "senegal", "25/11 10:00"],
       ["netherlands", "ecuador", "25/11 13:00"],
       ["netherlands", "qatar", "29/11 12:00"],
@@ -19,8 +19,8 @@
   {
     "name": "B",
     "matches": [
-      ["england", "iran", "21/11 10:00"],
-      ["usa", "wales", "21/11 16:00"],
+      ["england", "iran", "21/11 10:00", 6, 2],
+      ["usa", "wales", "21/11 16:00", 1, 1],
       ["wales", "iran", "25/11 07:00"],
       ["england", "usa", "25/11 16:00"],
       ["wales", "england", "29/11 16:00"],
@@ -36,12 +36,12 @@
   {
     "name": "C",
     "matches": [
-      ["argentina", "arabia", "22/11 07:00"],
-      ["mexico", "poland", "22/11 13:00"],
-      ["poland", "arabia", "26/11 10:00"],
-      ["argentina", "mexico", "26/11 16:00"],
-      ["poland", "argentina", "30/11 16:00"],
-      ["arabia", "mexico", "30/11 16:00"]
+      ["argentina", "arabia", "22/11 07:00", 1, 2],
+      ["mexico", "poland", "22/11 13:00", 0, 0],
+      ["poland", "arabia", "26/11 10:00", 2, 0],
+      ["argentina", "mexico", "26/11 16:00",2,0],
+      ["poland", "argentina", "30/11 16:00",2,0],
+      ["arabia", "mexico", "30/11 16:00",1,2]
     ],
     "teams": {
       "argentina": ["Argentina", "🇦🇷"],

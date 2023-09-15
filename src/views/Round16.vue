@@ -26,18 +26,8 @@
 <script>
 import MatchInput from "../components/MatchInput.vue";
 import NavigationActions from "../components/NavigationActions.vue";
-import { roundOf16, roundOf8 } from "../store/simpleStore";
+import { roundOf16Template, roundOf16, roundOf8 } from "../store/simpleStore";
 
-const template = [
-  ["a", "bb", "3/12 12:00"],
-  ["c", "dd", "3/12 16:00"],
-  ["d", "cc", "4/12 12:00"],
-  ["b", "aa", "4/12 16:00"],
-  ["e", "ff", "5/12 12:00"],
-  ["g", "hh", "5/12 16:00"],
-  ["f", "ee", "6/12 12:00"],
-  ["h", "gg", "6/12 16:00"],
-];
 export default {
   name: "RoundOf16",
   components: {
@@ -46,8 +36,8 @@ export default {
   },
   data() {
     return {
-      template,
-      matches: template.map(([keyHome, keyAway, date]) => [
+      template: roundOf16Template,
+      matches: roundOf16Template.map(([keyHome, keyAway, date]) => [
         ...(roundOf16[keyHome] || ["S/D", "🏳️"]),
         ...(roundOf16[keyAway] || ["S/D", "🏳️"]),
         date,
